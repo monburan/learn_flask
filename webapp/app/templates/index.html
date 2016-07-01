@@ -1,8 +1,17 @@
 <html>
 	<head>
+		{%if title %}
 		<title>{{title}} - webapp</title>
+		{% else %}
+		<title>Welcome to webapp</title>
+		{% endif %}
 	</head>
 	<body>
 		<h1>Hello!{{user.nickname}}!</h1>
+		{% for post in posts %}
+		<p>{{post.author.nickname}} says:<br>
+		<b>{{post.body}}</b>
+		</p>
+		{% endfor %}
 	</body>
 </html>
