@@ -5,6 +5,7 @@
 		{% else %}
 		<title>Welcome to webapp</title>
 		{% endif %}
+		<!--判断是否传递了title参数，如果没有将使用 welcome to webapp-->
 	</head>
 	<body>
 		<h1>Hello!{{user.nickname}}!</h1>
@@ -13,5 +14,6 @@
 		<b>{{post.body}}</b>
 		</p>
 		{% endfor %}
+		<!--使用for循环来显示多条数据-->
 	</body>
 </html>

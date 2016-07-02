@@ -12,6 +12,15 @@
 			Webapp:<a href="/index_base">Home</a>
 		</div>
 		<hr>
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+		<ul>
+			{% for message in massages %}
+			<li>{{ message }} </li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+		{% endwith %}
 		{% block content %}{% endblock %}
 		<!--block 控制语句定义派生模板插入地方-->
 	</body>
